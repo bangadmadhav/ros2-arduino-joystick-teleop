@@ -130,7 +130,7 @@ Plug in the Arduino joystick over USB before launching Terminal 2.
 - Configured `ros2_control` with `JointGroupVelocityController` via `controller.yaml`
 - Integrated the full pipeline from physical joystick input to simulated robot motion
 
-> *Robot URDF and mesh files are based on course learning material and are included for completeness.*
+> *Robot mesh files is not designed by me rather used only for reference.*
 
 ---
 
