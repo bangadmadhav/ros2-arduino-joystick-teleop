@@ -43,14 +43,7 @@ def generate_launch_description():
             {"use_sim_time": True}
         ]
     )
-
-    #joint_state_publisher_gui node used for a UI with sliders to move the joints around (ONLY FOR TESTING)
-    joint_state_publisher_gui_node = Node(
-        package='joint_state_publisher_gui',
-        executable='joint_state_publisher_gui',
-        name='joint_state_publisher_gui'
-    )
-
+    
     #rviz2 node to visualize the robot in rviz (ONLY FOR TESTING)
     rviz_node = Node(
         package='rviz2',
@@ -89,7 +82,6 @@ def generate_launch_description():
     # 4. Return the LaunchDescription
     return LaunchDescription([
         robot_state_publisher_node,
-        joint_state_publisher_gui_node,
         rviz_node,
         gazebo_resource_path,
         gazebo_node,
