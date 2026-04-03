@@ -142,11 +142,11 @@ Demonstrates bridging physical hardware input into a ROS2 simulation pipeline, i
 
 ## 📸 System Architecture
 
-<img src="/assets/rqt_graph.png" alt="RQT Graph" size="250">
+<img src="/assets/rqt_graph.png" alt="RQT Graph" width="250">
 *Node and topic connections*
 
-<img src="/assets/tf2_tree.png" alt="TF2 Tree" size="250">
+<img src="/assets/tf2_tree.png" alt="TF2 Tree" width="250">
 *Transform frame hierarchy*
 
-<img src="/assets/gazebo_sim.png" alt="Gazebo Simulation" size="250">
+<img src="/assets/gazebo_sim.png" alt="Gazebo Simulation" width="250">
 *Differential drive robot in Gazebo*
