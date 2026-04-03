@@ -18,6 +18,7 @@ This project bridges a physical Arduino joystick to a Gazebo-simulated different
 ## 🎥 Demo
 
 [![Watch the demo](https://img.youtube.com/vi/KkGPCAaPrQs/0.jpg)](https://youtu.be/KkGPCAaPrQs)
+Link to Video Demo: https://youtu.be/KkGPCAaPrQs
 
 ---
 
@@ -44,15 +45,7 @@ Reads raw analog X/Y values (0–1023) from Arduino over serial, normalizes to `
 | `angular_gain` | 1.0 | Scales normalized joystick axis to angular velocity |
 
 ### `velocity_controller` node
-Subscribes to `/bot_control/cmd_vel` and converts `(v, ω)` to individual left/right wheel speeds using differential drive inverse kinematics via Eigen:
-
-```
-[v]   [r/2   r/2] [ω_left]
-[ω] = [r/d   -r/d] [ω_right]
-
-→ [ω_left, ω_right] = M⁻¹ · [v, ω]
-```
-
+Subscribes to `/bot_control/cmd_vel` and converts `(v, ω)` to individual left/right wheel speeds using differential drive inverse kinematics via Eigen.
 Publishes to `/velocity_controller/commands` consumed by `ros2_control`.
 
 | Parameter | Default | Description |
@@ -113,12 +106,12 @@ ros2-joystick-teleop/
 ros2 launch bot_bringup display.launch.py
 ```
 
+Plug in the Arduino joystick over USB before launching Terminal 2.
+
 **Terminal 2 — Launch controllers and joystick node:**
 ```bash
 ros2 launch bot_bringup controller.launch.py
 ```
-
-Plug in the Arduino joystick over USB before launching Terminal 2.
 
 ---
 
@@ -130,7 +123,7 @@ Plug in the Arduino joystick over USB before launching Terminal 2.
 - Configured `ros2_control` with `JointGroupVelocityController` via `controller.yaml`
 - Integrated the full pipeline from physical joystick input to simulated robot motion
 
-> *Robot mesh files is not designed by me rather used only for reference.*
+> *Robot mesh files (.stl) is not designed by me rather used only for reference.*
 
 ---
 
